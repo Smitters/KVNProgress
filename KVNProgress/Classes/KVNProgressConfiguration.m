@@ -36,8 +36,6 @@
         _stopColor = [_statusColor copy];
 		
 		_minimumDisplayTime = 0.3f;
-		_minimumSuccessDisplayTime = 2.0f;
-		_minimumErrorDisplayTime = 1.3f;
 		
 		_tapBlock = nil;
 		_allowUserInteraction = NO;
@@ -73,8 +71,6 @@
     copy.stopColor = [self.stopColor copy];
 	
 	copy.minimumDisplayTime = self.minimumDisplayTime;
-	copy.minimumSuccessDisplayTime = self.minimumSuccessDisplayTime;
-	copy.minimumErrorDisplayTime = self.minimumErrorDisplayTime;
 	
 	copy.tapBlock = self.tapBlock;
 	copy.allowUserInteraction = self.allowUserInteraction;
