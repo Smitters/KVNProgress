@@ -439,29 +439,6 @@ static KVNProgressConfiguration *configuration;
 			}
 		});
 	}
-	
-	// If it's an auto-dismissable HUD
-	if (self.style != KVNProgressStyleProgress) {
-		NSTimeInterval delay;
-		switch (self.style) {
-			case KVNProgressStyleProgress:
-				// should never happen
-				return;
-			case KVNProgressStyleSuccess:
-				delay = self.configuration.minimumSuccessDisplayTime;
-				break;
-			case KVNProgressStyleError:
-				delay = self.configuration.minimumErrorDisplayTime;
-				break;
-			case KVNProgressStyleHidden:
-				// should never happen
-				return;
-		}
-		
-		dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-			[KVNBlockSelf.class dismissWithCompletion:completion];
-		});
-	}
 }
 
 #pragma mark - Dimiss
