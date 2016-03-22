@@ -76,10 +76,6 @@ typedef NS_ENUM(NSUInteger, KVNProgressBackgroundType) {
 
 /** The minimum time (in seconds) the hud will be displayed. No matter if <code>dismiss</code> is called. */
 @property (nonatomic, assign) NSTimeInterval minimumDisplayTime;
-/** The minimum time (in seconds) the success will be displayed. */
-@property (nonatomic, assign) NSTimeInterval minimumSuccessDisplayTime;
-/** The minimum time (in seconds) the error will be displayed. */
-@property (nonatomic, assign) NSTimeInterval minimumErrorDisplayTime;
 
 #pragma mark - Interaction
 
